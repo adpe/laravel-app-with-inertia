@@ -6,7 +6,7 @@
                     My App
                 </h1>
 
-                <p class="text-sm ml-4">Welcome back, {{ username }}!</p>
+                <p class="text-sm ml-4">Welcome back, {{ $page.props.auth.user.username }}!</p>
             </div>
 
             <Nav/>
@@ -20,15 +20,6 @@
     </section>
 </template>
 
-<script>
+<script setup>
 import Nav from "./Nav";
-
-export default {
-    components: { Nav },
-    computed: {
-        username() {
-            return this.$page.props.auth.user.username;
-        }
-    }
-};
 </script>
