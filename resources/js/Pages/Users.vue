@@ -1,4 +1,9 @@
 <template>
+    <Head>
+        <title>Users</title>
+        <meta type="description" content="Inertia demo app users page" head-key="description">
+    </Head>
+
     <h1 class="text-3xl">
         Users
     </h1>
