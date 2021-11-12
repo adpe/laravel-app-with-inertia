@@ -15,10 +15,13 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home', [
-        'name' => 'Adrian Perez',
-        'frameworks' => [
-            'Laravel', 'Vue', 'Inertia'
-        ]
-    ]);
+    return Inertia::render('Home');
+});
+
+Route::get('/users', function () {
+    return Inertia::render('Users');
+});
+
+Route::get('/settings', function () {
+    return Inertia::render('Settings');
 });
