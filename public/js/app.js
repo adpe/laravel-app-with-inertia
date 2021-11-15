@@ -530,15 +530,23 @@ var map = {
 		"./resources/js/Pages/Settings.vue",
 		"resources_js_Pages_Settings_vue"
 	],
-	"./Users": [
-		"./resources/js/Pages/Users.vue",
-		"/js/vendor",
-		"resources_js_Pages_Users_vue"
+	"./Users/Create": [
+		"./resources/js/Pages/Users/Create.vue",
+		"resources_js_Pages_Users_Create_vue"
 	],
-	"./Users.vue": [
-		"./resources/js/Pages/Users.vue",
+	"./Users/Create.vue": [
+		"./resources/js/Pages/Users/Create.vue",
+		"resources_js_Pages_Users_Create_vue"
+	],
+	"./Users/Index": [
+		"./resources/js/Pages/Users/Index.vue",
 		"/js/vendor",
-		"resources_js_Pages_Users_vue"
+		"resources_js_Pages_Users_Index_vue"
+	],
+	"./Users/Index.vue": [
+		"./resources/js/Pages/Users/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_Users_Index_vue"
 	]
 };
 function webpackAsyncContext(req) {
