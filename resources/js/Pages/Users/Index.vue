@@ -10,7 +10,7 @@
                 Users
             </h1>
 
-            <Link href="/users/create" class="text-gray-600 text-sm ml-3">New User</Link>
+            <Link v-if="can.createUser" href="/users/create" class="text-gray-600 text-sm ml-3">New User</Link>
         </div>
 
         <input v-model="search" type="text" placeholder="Search..." class="border px-2 rounded-lg">
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <td v-if="user.can.edit" class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                 <a :href="`/users/${user.id}/edit`" class="text-gray-600 hover:text-gray-900">Edit</a>
                             </td>
                         </tr>
@@ -54,7 +54,8 @@ import {Inertia} from "@inertiajs/inertia";
 
 let props = defineProps({
     users: Object,
-    filters: Object
+    filters: Object,
+    can: Object
 });
 
 let search = ref(props.filters.search);
