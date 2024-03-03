@@ -1,6 +1,5 @@
 import { createApp, h } from 'vue'
-import { createInertiaApp, Link, Head } from '@inertiajs/inertia-vue3'
-import { InertiaProgress } from '@inertiajs/progress'
+import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
 import Layout from './Shared/Layout';
 
 createInertiaApp({
@@ -20,10 +19,9 @@ createInertiaApp({
             .component('Head', Head)
             .mount(el)
     },
+    progress: {
+        color: 'red',
+        showSpinner: true,
+    },
     title: title => `My App - ${title}`
 })
-
-InertiaProgress.init({
-    color: 'red',
-    showSpinner: true,
-});
